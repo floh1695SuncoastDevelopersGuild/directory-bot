@@ -1,0 +1,10 @@
+# Node and Yarn
+node_modules
+yarn.lock
+
+# Temp files
+*.swp
+\#*#
+*~
+~*
+
