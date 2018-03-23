@@ -6,8 +6,8 @@
   "dependencies": {
     "body-parser": "^1.18.2",
     "express": "^4.16.3"
-  }, 
+  },
   "scripts": {
-    "watch" :"nodemon app.js"
+    "watch": "nodemon app.js"
   }
 }

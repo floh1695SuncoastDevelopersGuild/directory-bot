@@ -8,7 +8,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const app = express().use(bodyParser.json());
 
-// Creates the endpoint for our webhook 
+// Creates the endpoint for our webhook
 app.post('/webhook', (req, res) => {
 
     let body = req.body;
@@ -61,9 +61,10 @@ app.get('/webhook', (req, res) => {
     }
 });
 
-app.get("/hello", (req, res) => {
-    res.json({ hello: 'world' })
-})
+app.get('/hello', (req, res) => {
+    // res.json({ hello: 'world' })
+    res.send('<button>clickme</button>');
+});
 
-// Sets server port and logs     message on success
-app.listen(8080, () => console.log('webhook is listening'));
+// Sets server port and logs message on success
+app.listen(80, () => console.log('webhook is listening'));
