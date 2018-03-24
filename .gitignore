@@ -65,3 +65,6 @@ typings/
 \#*#
 *~
 ~*
+
+# Other ignores
+yarn.lock
