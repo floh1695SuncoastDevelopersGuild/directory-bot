@@ -101,7 +101,6 @@ app.get('/hello', (req, res) => {
 ////2: store
 ////1: pull availablePerson
 
-
 // End: Aaron
 
 app.listen(PORT, () => console.log(`Listening on ${PORT}`));
