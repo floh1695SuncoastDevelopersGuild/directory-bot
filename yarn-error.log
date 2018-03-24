@@ -1,8 +1,8 @@
 Arguments: 
-  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js add twilio
+  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js
 
 PATH: 
-  C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files (x86)\Microsoft Dynamics AX\50\Client\Bin\;C:\Program Files (x86)\Shoreline Communications\ShoreWare Client\;C:\Program Files (x86)\Shoreline Communications\ShoreWare Client\win64;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\nodejs\;C:\Program Files (x86)\Yarn\bin\;C:\Program Files\Git\cmd;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\awasserman\AppData\Local\Microsoft\WindowsApps;C:\Users\awasserman\AppData\Roaming\npm;C:\Users\awasserman\AppData\Local\Yarn\bin;C:\Users\awasserman\AppData\Local\GitHubCLI\bin;C:\Program Files\Microsoft VS Code\bin;C:\Users\awasserman\AppData\Local\GitHubDesktop\bin
+  C:\Ruby24\bin;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files (x86)\Microsoft Dynamics AX\50\Client\Bin\;C:\Program Files (x86)\Shoreline Communications\ShoreWare Client\;C:\Program Files (x86)\Shoreline Communications\ShoreWare Client\win64;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\nodejs\;C:\Program Files (x86)\Yarn\bin\;C:\Program Files\Git\cmd;C:\Users\cbayley\AppData\Local\Continuum\anaconda3;C:\Users\cbayley\AppData\Local\Continuum\anaconda3\Library\mingw-w64\bin;C:\Users\cbayley\AppData\Local\Continuum\anaconda3\Library\usr\bin;C:\Users\cbayley\AppData\Local\Continuum\anaconda3\Library\bin;C:\Users\cbayley\AppData\Local\Continuum\anaconda3\Scripts;C:\Ruby24\bin;C:\Users\cbayley\AppData\Local\Microsoft\WindowsApps;C:\Users\cbayley\AppData\Roaming\npm;C:\Users\cbayley\AppData\Local\Yarn\bin;C:\Users\cbayley\AppData\Local\GitHubCLI\bin;C:\Program Files\Microsoft VS Code\bin;C:\Program Files\Heroku\bin
 
 Yarn version: 
   1.5.1
@@ -15,9 +15,9 @@ Platform:
 
 npm manifest: 
   {
-    "name": "node-js-getting-started",
+    "name": "directory-bot",
     "version": "0.3.0",
-    "description": "A sample Node.js app using Express 4",
+    "description": "A directory bot for FB messenger",
     "engines": {
       "node": "8.9.1"
     },
@@ -28,16 +28,14 @@ npm manifest:
     },
     "dependencies": {
       "ejs": "^2.5.6",
-      "express": "^4.15.2"
+      "express": "^4.15.2",
+      "twilio": "^3.14.0"
     },
     "devDependencies": {
       "request": "^2.81.0",
       "tape": "^4.7.0"
     },
-    "repository": {
-      "type": "git",
-      "url": "https://github.com/heroku/node-js-getting-started"
-    },
+    "repository": "https://github.com/floh1695/directory-bot",
     "keywords": [
       "node",
       "heroku",

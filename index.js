@@ -57,8 +57,12 @@ app.get('/webhook', (req, res) => {
 
       // Responds with the challenge token from the request
       console.log('WEBHOOK_VERIFIED');
-      // res.status(200).send(JSON.stringify(req));
       console.log(req);
+      // res.status(200).send(JSON.stringify(req, (k, v) => {
+      //   console.log(k, ':', v);
+      //   return v;
+      // }));
+      // console.log(req);
       res.status(200).send('CHALLANGED');
     } else {
       // Responds with '403 Forbidden' if verify tokens do not match
