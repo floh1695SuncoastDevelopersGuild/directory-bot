@@ -76,19 +76,19 @@ app.get('/hello', (req, res) => {
 //END-GOAL: build logic to check send a message to someone available from the volunteerTable => contents: requestorPH#
 const twilio = require('twilio');
 var accountSid = 'ACbfa634639f4f4a70254ebda9c706d626'; // Your Account SID from www.twilio.com/console
-var authToken = 'your_auth_token'; // in .env from: Your Auth Token from www.twilio.com/console 
+var authToken = process.env.TWILIO_TOKEN; // in .env from: Your Auth Token from www.twilio.com/console 
 
 var client = new twilio(accountSid, authToken);
 
 const sendSMS = () => {
-    ///using this for testing
-    let toPhoneNum = '+17274123303'
+  ///using this for testing
+  let toPhoneNum = '+17274123303'
 
-    client.messages.create({
+  client.messages.create({
     body: 'Hello World!',
     to: toPhoneNum, // Text this number
     from: '+18132134751' // From a valid Twilio number
-    })
+  })
     .then((message) => console.log(message.sid));
 
 }
