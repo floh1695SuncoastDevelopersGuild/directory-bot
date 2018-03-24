@@ -3,9 +3,9 @@
 const APP_ID = '159041564812667';
 const PAGE_ACCESS_TOKEN = 'EAACQpbZC5pXsBAGH7uZCs9fXkZC3bEHv0atZCFeZBipCZCXYikWkQXyTPCCmUMTXcBKNLHdbvD6V4GZBtpFOmZABw0SvGpQ7yxqZCrpNyUjX9gZAeYmn0IZBs0jZByo1Xbg1WjnlHgSnTli9qAhWGZB5KQMsPYDUzHZC40YN1ih22Y7KnkIQZDZD';
 
-const express = require('express')
-const path = require('path')
-const PORT = process.env.PORT || 5000
+const express = require('express');
+const path = require('path');
+const PORT = process.env.PORT || 5000;
 
 const app = express().use(express.static(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'public')));
@@ -70,5 +70,9 @@ app.get('/hello', (req, res) => {
   // res.json({ hello: 'world' })
   res.send('<button>clickme</button>');
 });
+
+// Start: Aaron
+
+// End: Aaron
 
 app.listen(PORT, () => console.log(`Listening on ${ PORT }`));
