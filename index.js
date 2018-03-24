@@ -93,6 +93,10 @@ const sendSMS = () => {
 
 }
 
+app.get('/sms', (req, res) => {
+  sendSMS();
+  res.sendStatus(200);
+});
 
 ////2: store
 ////1: pull availablePerson
