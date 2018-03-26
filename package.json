@@ -9,9 +9,10 @@
   "scripts": {
     "start": "node index.js",
     "test": "node test.js",
-    "deploy":"git push heroku master"
+    "deploy": "git push heroku master"
   },
   "dependencies": {
+    "body-parser": "^1.18.2",
     "ejs": "^2.5.6",
     "express": "^4.15.2",
     "twilio": "^3.14.0"
