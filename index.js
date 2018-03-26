@@ -57,7 +57,7 @@ app.get('/webhook', (req, res) => {
 
       // Responds with the challenge token from the request
       console.log('WEBHOOK_VERIFIED');
-      console.log(req);
+      console.log(req.body);
       // res.status(200).send(JSON.stringify(req, (k, v) => {
       //   console.log(k, ':', v);
       //   return v;
