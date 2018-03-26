@@ -29,6 +29,7 @@ function callSendAPI(sender_psid, response) {
 app.post('/webhook', (req, res) => {
 
   let body = req.body;
+  console.log('TAGTAGTAG:', body);
 
   // Checks this is an event from a page subscription
   if (body.object === 'page') {
