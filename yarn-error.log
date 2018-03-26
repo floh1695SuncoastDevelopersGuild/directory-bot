@@ -1,5 +1,5 @@
 Arguments: 
-  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js
+  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js run start
 
 PATH: 
   C:\Ruby24\bin;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files (x86)\Microsoft Dynamics AX\50\Client\Bin\;C:\Program Files (x86)\Shoreline Communications\ShoreWare Client\;C:\Program Files (x86)\Shoreline Communications\ShoreWare Client\win64;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\nodejs\;C:\Program Files (x86)\Yarn\bin\;C:\Program Files\Git\cmd;C:\Users\cbayley\AppData\Local\Continuum\anaconda3;C:\Users\cbayley\AppData\Local\Continuum\anaconda3\Library\mingw-w64\bin;C:\Users\cbayley\AppData\Local\Continuum\anaconda3\Library\usr\bin;C:\Users\cbayley\AppData\Local\Continuum\anaconda3\Library\bin;C:\Users\cbayley\AppData\Local\Continuum\anaconda3\Scripts;C:\Ruby24\bin;C:\Users\cbayley\AppData\Local\Microsoft\WindowsApps;C:\Users\cbayley\AppData\Roaming\npm;C:\Users\cbayley\AppData\Local\Yarn\bin;C:\Users\cbayley\AppData\Local\GitHubCLI\bin;C:\Program Files\Microsoft VS Code\bin;C:\Program Files\Heroku\bin
@@ -19,14 +19,16 @@ npm manifest:
     "version": "0.3.0",
     "description": "A directory bot for FB messenger",
     "engines": {
-      "node": "8.9.1"
+      "node": "9.7.1"
     },
     "main": "index.js",
     "scripts": {
       "start": "node index.js",
-      "test": "node test.js"
+      "test": "node test.js",
+      "deploy": "git push heroku master"
     },
     "dependencies": {
+      "body-parser": "^1.18.2",
       "ejs": "^2.5.6",
       "express": "^4.15.2",
       "twilio": "^3.14.0"
@@ -51,14 +53,16 @@ Lockfile:
   No lockfile
 
 Trace: 
-  Error: Found incompatible module
-      at new MessageError (C:\Program Files (x86)\Yarn\lib\cli.js:186:110)
-      at Object.checkOne (C:\Program Files (x86)\Yarn\lib\cli.js:62444:11)
-      at C:\Program Files (x86)\Yarn\lib\cli.js:22773:75
-      at Generator.next (<anonymous>)
-      at step (C:\Program Files (x86)\Yarn\lib\cli.js:98:30)
-      at C:\Program Files (x86)\Yarn\lib\cli.js:116:14
-      at new Promise (<anonymous>)
-      at new F (C:\Program Files (x86)\Yarn\lib\cli.js:23451:28)
-      at C:\Program Files (x86)\Yarn\lib\cli.js:95:12
-      at C:\Program Files (x86)\Yarn\lib\cli.js:22777:27
+  Error: Command failed.
+  Exit code: 1
+  Command: C:\WINDOWS\system32\cmd.exe
+  Arguments: /d /s /c node index.js
+  Directory: C:\Users\cbayley\Git\directory-bot
+  Output:
+  
+      at ProcessTermError.MessageError (C:\Program Files (x86)\Yarn\lib\cli.js:186:110)
+      at new ProcessTermError (C:\Program Files (x86)\Yarn\lib\cli.js:226:113)
+      at ChildProcess.<anonymous> (C:\Program Files (x86)\Yarn\lib\cli.js:30281:17)
+      at ChildProcess.emit (events.js:127:13)
+      at maybeClose (internal/child_process.js:936:16)
+      at Process.ChildProcess._handle.onexit (internal/child_process.js:220:5)

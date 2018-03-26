@@ -3,8 +3,8 @@
 const APP_ID = '159041564812667';
 const PAGE_ACCESS_TOKEN = 'EAACQpbZC5pXsBAGH7uZCs9fXkZC3bEHv0atZCFeZBipCZCXYikWkQXyTPCCmUMTXcBKNLHdbvD6V4GZBtpFOmZABw0SvGpQ7yxqZCrpNyUjX9gZAeYmn0IZBs0jZByo1Xbg1WjnlHgSnTli9qAhWGZB5KQMsPYDUzHZC40YN1ih22Y7KnkIQZDZD';
 
-const bodyParser = require('body-parser');
 const express = require('express');
+const bodyParser = require('body-parser');
 const path = require('path');
 const PORT = process.env.PORT || 5000;
 
@@ -37,12 +37,16 @@ app.post('/webhook', (req, res) => {
   if (body && body.object === 'page') {
 
     // Iterates over each entry - there may be multiple if batched
-    body.entry.forEach(function (entry) {
+    body.entry.forEach(function(entry) {
 
-      // Gets the message. entry.messaging is an array, but 
-      // will only ever contain one message, so we get index 0
+      // Gets the body of the webhook event
       let webhook_event = entry.messaging[0];
       console.log(webhook_event);
+    
+      // Get the sender PSID
+      let sender_psid = webhook_event.sender.id;
+      console.log('Sender PSID: ' + sender_psid);
+    
     });
 
     // Returns a '200 OK' response to all requests
