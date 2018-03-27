@@ -34,6 +34,18 @@ function handleMessage(sender_psid, received_message) {
           "title": "Red",
           "payload": "CHOOSE_RED"
           // "image_url": "http://example.com/img/red.png"
+        },
+        {
+          "content_type": "text",
+          "title": "Green",
+          "payload": "CHOOSE_GREEN"
+          // "image_url": "http://example.com/img/red.png"
+        },
+        {
+          "content_type": "text",
+          "title": "Blue",
+          "payload": "CHOOSE_BLUE"
+          // "image_url": "http://example.com/img/red.png"
         }
       ]
     }
