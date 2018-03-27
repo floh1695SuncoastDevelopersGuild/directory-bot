@@ -22,6 +22,8 @@ function handleMessage(sender_psid, received_message) {
 
   let response;
 
+  console.log('GREP:ME:DUDES =>', {received_message});
+
   // Check if the message contains text
   if (received_message.text) {
 
