@@ -23,6 +23,14 @@ function handleMessage(sender_psid, received_message) {
   let response;
 
   console.log('GREP:ME:DUDES =>', {received_message});
+  let payment = null;
+  if (received_message.quick_replies) {
+    const quick_replies = received_message.quick_replies;
+    if (quick_replies.payload) {
+      payment = quick_replies.payload;
+    }
+  }
+  console.log('PAYMENT:CHECK:REAL', payment);
 
   // Check if the message contains text
   if (received_message.text) {
