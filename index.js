@@ -32,7 +32,7 @@ function handleMessage(sender_psid, received_message) {
   }
 
   // Sends the response message
-  callSendAPI(sender_psid, response);
+  callSendAPI(parseInt(sender_psid), response);
 }
 
 // Handles messaging_postbacks events
@@ -56,7 +56,8 @@ function callSendAPI(sender_psid, response) {
     "method": "POST",
     "json": request_body
   }
-  console.log({request_body,_request });
+  console.log(JSON.stringify(_request))
+  console.log({request_body });
   // Send the HTTP request to the Messenger Platform
   request(_request, (err, res, body) => {
     console.log({err, body});
