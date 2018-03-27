@@ -70,6 +70,7 @@ function callSendAPI(sender_psid, response) {
 
 // Creates the endpoint for our webhook
 app.post('/webhook', (req, res) => {
+  console.log('THISISABIGMESSAGEOYUCANSEEEASLY');
 
   let body = req.body;
   console.log('TAG:BODY:', body);
