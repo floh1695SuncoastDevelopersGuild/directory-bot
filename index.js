@@ -27,12 +27,20 @@ function handleMessage(sender_psid, received_message) {
 
     // Create the payload for a basic text message
     response = {
-      "text": `You sent the message: "${received_message.text}". Now send me an image!`
+      "text": `You sent the message: "${received_message.text}". Now send me an image!`,
+      "quick_replies": [
+        {
+          "content_type": "text",
+          "title": "Red",
+          "payload": "CHOOSE_RED"
+          // "image_url": "http://example.com/img/red.png"
+        }
+      ]
     }
   }
 
   // Sends the response message
-  console.log('typeof psid', typeof(sender_psid));
+  console.log('typeof psid', typeof (sender_psid));
   callSendAPI(parseInt(sender_psid), response);
 }
 
@@ -51,17 +59,17 @@ function callSendAPI(sender_psid, response) {
     },
     "message": response
   }
-  const _request ={
+  const _request = {
     "uri": "https://graph.facebook.com/v2.12/me/messages",
     "qs": { "access_token": PAGE_ACCESS_TOKEN },
     "method": "POST",
     "json": request_body
   }
   console.log(JSON.stringify(_request))
-  console.log({request_body });
+  console.log({ request_body });
   // Send the HTTP request to the Messenger Platform
   request(_request, (err, res, body) => {
-    console.log({err, body});
+    console.log({ err, body });
     if (!err) {
       console.log('message sent!')
     } else {
