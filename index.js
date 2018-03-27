@@ -32,6 +32,7 @@ function handleMessage(sender_psid, received_message) {
   }
 
   // Sends the response message
+  console.log('typeof psid', typeof(sender_psid));
   callSendAPI(parseInt(sender_psid), response);
 }
 
