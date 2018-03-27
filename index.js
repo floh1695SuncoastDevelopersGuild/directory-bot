@@ -24,10 +24,10 @@ function handleMessage(sender_psid, received_message) {
 
   console.log('GREP:ME:DUDES =>', {received_message});
   let payment = null;
-  if (received_message.quick_replies) {
-    const quick_replies = received_message.quick_replies;
-    if (quick_replies.payload) {
-      payment = quick_replies.payload;
+  if (received_message.quick_reply) {
+    const quick_reply = received_message.quick_reply;
+    if (quick_reply.payload) {
+      payment = quick_reply.payload;
     }
   }
   console.log('PAYMENT:CHECK:REAL', payment);
