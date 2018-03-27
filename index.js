@@ -50,14 +50,15 @@ function callSendAPI(sender_psid, response) {
     },
     "message": response
   }
-  console.log(request_body);
-  // Send the HTTP request to the Messenger Platform
-  request({
+  const _request ={
     "uri": "https://graph.facebook.com/v2.12/me/messages",
     "qs": { "access_token": PAGE_ACCESS_TOKEN },
     "method": "POST",
     "json": request_body
-  }, (err, res, body) => {
+  }
+  console.log({request_body,_request });
+  // Send the HTTP request to the Messenger Platform
+  request(_request, (err, res, body) => {
     console.log({err, body});
     if (!err) {
       console.log('message sent!')
