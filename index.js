@@ -48,7 +48,7 @@ function handleMessage(sender_psid, received_message) {
       }
     } else if (payment === PAYLOAD_VOLUNTEER) {
       response = {
-        text: `This link will take you to the Metropolitan Ministries Volunteer Page: ${volunteerPage}`
+        text: `Thank you for your interest in volunteering with Metropolitan Ministries!\nThis link will direct you to the Volunteer Enrollment Form: ${volunteerPage}`
       }
     } else if (payment === PAYLOAD_MAINPAGE) {
       response = {
