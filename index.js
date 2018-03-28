@@ -3,7 +3,7 @@
 const APP_ID = '159041564812667';
 const PAGE_ACCESS_TOKEN = 'EAACQpbZC5pXsBAGI6rsFrPiSnVVS9V0ZAr3BAAqn3Vk2wXtqc5KUGU6OZAxkZAyZAsNplgDgjUwe1TRgzzl71OwCiuZAJrjMaZBZB6WEUGNsuch7HTIDpDzXTnZA1YOzmRbOoXp9whNgRbQ1p179HY6MJHs0ZB6meAKDeG6UoNazZC4wgZDZD';
 
-const volunteerPage = 'http://www.metromin.org/volunteer/';
+const volunteerPage = 'https://airtable.com/shrM7UzbeCg5wSBRb';
 const helpPage = 'http://www.metromin.org/i-need-help.html';
 
 const PAYLOAD_HELP = 'TOKEN_I_NEED_HELP_3429854783';
@@ -42,11 +42,11 @@ function handleMessage(sender_psid, received_message) {
   if (payment) {
     if (payment === PAYLOAD_HELP) {
       response = {
-        text: helpPage
+        text: `This link will take you to the Metropolitan Ministries I Need Help Page: ${helpPage}`
       }
     } else if (payment === PAYLOAD_VOLUNTEER) {
       response = {
-        text: volunteerPage
+        text: `This link will take you to the Metropolitan Ministries Volunteer Page: ${volunteerPage}`
       }
     }
   } else if (received_message.text) {
