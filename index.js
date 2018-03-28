@@ -75,7 +75,7 @@ function handleMessage(sender_psid, received_message) {
         },
         {
           content_type: "text",
-          title: "Where is the main website?",
+          title: "Metro Min Page",
           payload: PAYLOAD_MAINPAGE
         }
       ]
