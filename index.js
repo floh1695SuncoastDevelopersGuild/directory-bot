@@ -52,7 +52,7 @@ function handleMessage(sender_psid, received_message) {
       }
     } else if (payment === PAYLOAD_MAINPAGE) {
       response = {
-        text: `This link will take you to the Metropolitan Ministries Main Page: ${mainPage}`
+        text: `For more information please visit the Metropolitan Ministries Main Page: ${mainPage}`
       }
     }
   } else if (received_message.text) {
