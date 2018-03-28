@@ -44,7 +44,7 @@ function handleMessage(sender_psid, received_message) {
   if (payment) {
     if (payment === PAYLOAD_HELP) {
       response = {
-        text: `If this is an emergency that needs immediate assistance please call 911! \n\nMetropolitan Ministries thanks you for trusting us. Please fill out the provided form ${helpPage} so we can adminster proper assitance as soon as possible.`
+        text: `If this is an emergency that needs immediate assistance please call 911! \n\nMetropolitan Ministries thanks you for trusting us. Please fill out the provided form ${helpPage} so we can adminster proper assistance as soon as possible.`
       }
     } else if (payment === PAYLOAD_VOLUNTEER) {
       response = {
