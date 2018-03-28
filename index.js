@@ -3,9 +3,11 @@
 const APP_ID = '159041564812667';
 const PAGE_ACCESS_TOKEN = 'EAACQpbZC5pXsBAGI6rsFrPiSnVVS9V0ZAr3BAAqn3Vk2wXtqc5KUGU6OZAxkZAyZAsNplgDgjUwe1TRgzzl71OwCiuZAJrjMaZBZB6WEUGNsuch7HTIDpDzXTnZA1YOzmRbOoXp9whNgRbQ1p179HY6MJHs0ZB6meAKDeG6UoNazZC4wgZDZD';
 
+const mainPage = 'http://www.metromin.org/';
 const volunteerPage = 'https://airtable.com/shrM7UzbeCg5wSBRb';
 const helpPage = 'http://www.metromin.org/i-need-help.html';
 
+const PAYLOAD_MAINPAGE = 'TOKEN_MAIN_PAGE_3758909812'
 const PAYLOAD_HELP = 'TOKEN_I_NEED_HELP_3429854783';
 const PAYLOAD_VOLUNTEER = 'TOKEN_VOLNTEER_9504938476';
 
@@ -28,7 +30,7 @@ function handleMessage(sender_psid, received_message) {
 
   let response;
 
-  console.log('GREP:ME:DUDES =>', {received_message});
+  console.log('GREP:ME:DUDES =>', { received_message });
   let payment = null;
   if (received_message.quick_reply) {
     const quick_reply = received_message.quick_reply;
@@ -48,12 +50,16 @@ function handleMessage(sender_psid, received_message) {
       response = {
         text: `This link will take you to the Metropolitan Ministries Volunteer Page: ${volunteerPage}`
       }
+    } else if (payment === PAYLOAD_MAINPAGE) {
+      response = {
+        text: `This link will take you to the Metropolitan Ministries Main Page: ${mainPage}`
+      }
     }
   } else if (received_message.text) {
 
     // Create the payload for a basic text message
     response = {
-      "text": `Hi there, I'm Hear To Help! How can we help you?`,
+      "text": `Hi there, I'm Here To Help! How can we help you?`,
       "quick_replies": [
         {
           "content_type": "text",
@@ -66,6 +72,11 @@ function handleMessage(sender_psid, received_message) {
           "title": "I want to volunteer",
           "payload": PAYLOAD_VOLUNTEER
           // "image_url": "http://example.com/img/red.png"
+        },
+        {
+          content_type: "text",
+          title: "Where is the main website?",
+          payload: PAYLOAD_MAINPAGE
         }
       ]
     }
