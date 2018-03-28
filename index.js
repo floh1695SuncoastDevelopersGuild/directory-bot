@@ -39,11 +39,21 @@ function handleMessage(sender_psid, received_message) {
   console.log('PAYMENT:CHECK:REAL', payment);
 
   // Check if the message contains text
-  if (received_message.text) {
+  if (payment) {
+    if (payment === PAYLOAD_HELP) {
+      response = {
+        text: helpPage
+      }
+    } else if (payment === PAYLOAD_VOLUNTEER) {
+      response = {
+        text: volunteerPage
+      }
+    }
+  } else if (received_message.text) {
 
     // Create the payload for a basic text message
     response = {
-      "text": `Hi there, I'm Hear To Help! Why are you contacting me?`,
+      "text": `Hi there, I'm Hear To Help! How can we help you?`,
       "quick_replies": [
         {
           "content_type": "text",
