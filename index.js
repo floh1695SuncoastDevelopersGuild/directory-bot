@@ -3,6 +3,12 @@
 const APP_ID = '159041564812667';
 const PAGE_ACCESS_TOKEN = 'EAACQpbZC5pXsBAGI6rsFrPiSnVVS9V0ZAr3BAAqn3Vk2wXtqc5KUGU6OZAxkZAyZAsNplgDgjUwe1TRgzzl71OwCiuZAJrjMaZBZB6WEUGNsuch7HTIDpDzXTnZA1YOzmRbOoXp9whNgRbQ1p179HY6MJHs0ZB6meAKDeG6UoNazZC4wgZDZD';
 
+const volunteerPage = 'http://www.metromin.org/volunteer/';
+const helpPage = 'http://www.metromin.org/i-need-help.html';
+
+const PAYLOAD_HELP = 'TOKEN_I_NEED_HELP_3429854783';
+const PAYLOAD_VOLUNTEER = 'TOKEN_VOLNTEER_9504938476';
+
 const express = require('express');
 const bodyParser = require('body-parser');
 const request = require('request');
@@ -37,24 +43,18 @@ function handleMessage(sender_psid, received_message) {
 
     // Create the payload for a basic text message
     response = {
-      "text": `You sent the message: "${received_message.text}". Now send me an image!`,
+      "text": `Hi there, I'm Hear To Help! Why are you contacting me?`,
       "quick_replies": [
         {
           "content_type": "text",
-          "title": "Red",
-          "payload": "CHOOSE_RED"
+          "title": "I need help!",
+          "payload": PAYLOAD_HELP
           // "image_url": "http://example.com/img/red.png"
         },
         {
           "content_type": "text",
-          "title": "Green",
-          "payload": "CHOOSE_GREEN"
-          // "image_url": "http://example.com/img/red.png"
-        },
-        {
-          "content_type": "text",
-          "title": "Blue",
-          "payload": "CHOOSE_BLUE"
+          "title": "I want to volunteer",
+          "payload": PAYLOAD_VOLUNTEER
           // "image_url": "http://example.com/img/red.png"
         }
       ]
