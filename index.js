@@ -5,7 +5,7 @@ const PAGE_ACCESS_TOKEN = 'EAACQpbZC5pXsBAGI6rsFrPiSnVVS9V0ZAr3BAAqn3Vk2wXtqc5KU
 
 const mainPage = 'http://www.metromin.org/';
 const volunteerPage = 'https://airtable.com/shrM7UzbeCg5wSBRb';
-const helpPage = 'http://www.metromin.org/i-need-help.html';
+const helpPage = 'http://hack-form.jenoch.surge.sh/';
 
 const PAYLOAD_MAINPAGE = 'TOKEN_MAIN_PAGE_3758909812'
 const PAYLOAD_HELP = 'TOKEN_I_NEED_HELP_3429854783';
